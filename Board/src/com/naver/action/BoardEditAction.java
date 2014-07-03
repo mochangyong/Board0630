@@ -5,13 +5,15 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.naver.controller.CommandAction;
 
-public class BoardWriteAction implements CommandAction {
+public class BoardEditAction implements CommandAction {
 
 	@Override
 	public String requestPro(HttpServletRequest request,
 			HttpServletResponse response) throws Throwable {
-		// TODO Auto-generated method stub
-		return "./jsp/board_write.jsp";
+		int idx = Integer.parseInt(request.getParameter("idx"));
+		
+		
+		return "./jsp/board_edit.do?idx= "+idx;
 	}
 
 }

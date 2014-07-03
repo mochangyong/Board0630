@@ -72,7 +72,7 @@ con.close();
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.DriverManager"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -111,27 +111,32 @@ con.close();
 	 -->
 
 <body>
-<h1 align = "center">게시글 조회</h1>
-<table align="center" border="1">
-<tr>
-<th>번호</th><td>${bcont.idx}</td>
-<th>작성자</th><td>${bcont.name}</td>
-<th>날짜</th><td>${bcont.regdate}</td>
-<th>조회수</th><td>${bcont.hit}</td>
-</tr>
-<tr>
-<th colspan="2">제목</th>
-<td colspan ="6">${bcont.title}</td>
-</tr>
-<tr>
-<th colspan="2">내용</th>
-<td colspan ="6">${bcont.cont}</td>
+	<h1 align="center">게시글 조회</h1>
+	<table align="center" border="1">
+		<tr>
+			<th>번호</th>
+			<td>${bcont.idx}</td>
+			<th>작성자</th>
+			<td>${bcont.name}</td>
+			<th>날짜</th>
+			<td>${bcont.regdate}</td>
+			<th>조회수</th>
+			<td>${bcont.hit}</td>
+		</tr>
+		<tr>
+			<th colspan="2">제목</th>
+			<td colspan="6">${bcont.title}</td>
+		</tr>
+		<tr>
+			<th colspan="2">내용</th>
+			<td colspan="6">${bcont.cont}</td>
 
-</tr>
-<tr>
-<td colspan="8">
-<a href="board_delete.do?idx=${bcont.idx}">게시글삭제</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="board_edite.do?idx=${bcont.idx}">게시글수정</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href ="./board_list.do">목록으로</a>
-</table>
+		</tr>
+		<tr>
+			<td colspan="8"><a href="board_delete.do?idx=${bcont.idx}">게시글삭제</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+				href="board_edit.do?idx=${bcont.idx}">게시글수정</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+				href="./board_list.do">목록으로</a>
+	</table>
 
 </body>
 </html>

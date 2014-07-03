@@ -73,33 +73,35 @@ con.close();
 <title>Insert title here</title>
 </head>
 <body>
-<h1 align="center">게시판 목록</h1>
-<table border ="1" align ="center">
-<tr>
-<th>번호</th><th>제목</th><th>작성자</th><th>날짜</th><th>조회수</th>
-</tr>
-<c:if test="${!empty blist}" >
-<c:forEach items="${blist}" var="bb">
-<tr>
-<td>${bb.idx}</td>
-<td><a href ="board_cont.do?idx=${bb.idx}">${bb.title}</a></td>
-<td>${bb.name}</td>
-<td>${bb.regdate}</td>
-<td>${bb.hit}</td>
-</tr>
-</c:forEach>
-</c:if>
-<c:if test="${empty blist}">
-<tr>
-<th>게시물이 없습니다.</th>
-</tr>
-</c:if>
-<tr>
-<td>
-<a href = "./board_write.do" >글쓰기</a>
-</td>
-</tr>
+	<h1 align="center">게시판 목록</h1>
+	<table border="1" align="center">
+		<tr>
+			<th>번호</th>
+			<th>제목</th>
+			<th>작성자</th>
+			<th>날짜</th>
+			<th>조회수</th>
+		</tr>
+		<c:if test="${!empty blist}">
+			<c:forEach items="${blist}" var="bb">
+				<tr>
+					<td>${bb.idx}</td>
+					<td><a href="board_cont.do?idx=${bb.idx}">${bb.title}</a></td>
+					<td>${bb.name}</td>
+					<td>${bb.regdate}</td>
+					<td>${bb.hit}</td>
+				</tr>
+			</c:forEach>
+		</c:if>
+		<c:if test="${empty blist}">
+			<tr>
+				<th>게시물이 없습니다.</th>
+			</tr>
+		</c:if>
+		<tr>
+			<td><a href="./board_write.do">글쓰기</a></td>
+		</tr>
 
-</table>
+	</table>
 </body>
 </html>

@@ -1,11 +1,5 @@
 package com.naver.action;
 
-import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -25,7 +19,7 @@ public class BoardListAction implements CommandAction {
 		request.setCharacterEncoding("UTF-8");
 
 
-		 List<BoardBean> blist = BoardDAO.getInstance().getList();
+		List<BoardBean> blist = BoardDAO.getInstance().getList();
 		 
 			 request.setAttribute("blist", blist);
 		  	

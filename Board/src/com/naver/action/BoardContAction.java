@@ -14,6 +14,8 @@ public class BoardContAction implements CommandAction {
 			HttpServletResponse response) throws Throwable {
 		
 			int idx = Integer.parseInt(request.getParameter("idx"));
+			BoardDAO.getInstance().updateHit(idx);
+			
 		
 			BoardBean bcont = BoardDAO.getInstance().getCont(idx);
 			
